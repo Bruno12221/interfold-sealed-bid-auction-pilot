@@ -4,6 +4,8 @@ A source-review snapshot of an **addition-only secure8192 second-price NFT aucti
 
 The repository includes Solidity contracts, the secure8192 Noir encryption/bid circuit, Rust encryption and OpenVM guests, deployment tooling, tests, and public synthetic proof fixtures. Genuine Noir and final OpenVM receipts are included for local verifier/composition checks. **A live threshold-network encrypted auction has not completed.**
 
+This pilot stays addition-only. A later stage may evaluate the upstream multiplication branch for encrypted comparisons that reveal only the winner and clearing price. That would need a validated circuit, suitable parameters and encoding, compatible operators, and new proof artifacts.
+
 `AuctionE3Program` is **not deployed or registered**. The recorded result source is unbound. Deployment needs reviewed immutable configuration and deadlines, actual-program release evidence, protocol-owner registration and one-time source binding. A compatible operator/proving service, fresh auction-specific proofs, an authorized Avail publication route with authenticated Sepolia DA receipts, and threshold decryption are also required. The reusable eight-contract verifier stack is deployed. RAILGUN funding integration is prepared; a successful private spend and usable independent Sepolia broadcaster have not been demonstrated.
 
 ## Review entrypoints
@@ -37,7 +39,7 @@ The exact Foundry optimizer/EVM settings are in [foundry.toml](foundry.toml). Ca
 
 ## Recorded Sepolia deployments
 
-Chain ID **11155111**. The foundation and eight reusable verifier contracts have recorded exact Sourcify source matches. These records describe synthetic-fixture validation, not a completed live auction or release approval. Explorer verification status may change; independently compare creation/runtime bytecode and constructor arguments.
+Chain ID **11155111**. All eleven deployed contracts were source-verified on Sepolia Etherscan on October 19, 2026, and have recorded exact Sourcify runtime matches. See the [Etherscan results](deployments/etherscan-verification.json) and [exact compiler inputs and constructor arguments](verification/etherscan/README.md). These records describe source matching and synthetic-fixture validation, not a completed live auction or release approval.
 
 | Component | Sepolia address |
 | --- | --- |

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "chainId": 11155111,
+  "contracts": {
+    "resultSource": {
+      "address": "0x8A5465A0E50cd28c0D4f4370b644e90e042feF58",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/InterfoldResultSource.sol:InterfoldResultSource",
+      "sourceLicense": "MIT",
+      "constructorArgs": [
+        "0xBD5B6D1aDA9e0eB248B678469C9Cd6a63507E42b",
+        "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a"
+      ],
+      "encodedConstructorArguments": "000000000000000000000000bd5b6d1ada9e0eb248b678469c9cd6a63507e42b000000000000000000000000abf398a8e62cd68137987c4b99c0f24a5fdcd97a",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/resultSource.standard-input.json",
+      "standardInputSha256": "0xab839bdf3f46dbb855f77546f2397412ab6315b2908be6991166974b8940694c",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x8A5465A0E50cd28c0D4f4370b644e90e042feF58#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x8A5465A0E50cd28c0D4f4370b644e90e042feF58"
+    },
+    "demoNFT": {
+      "address": "0x2e584f69C14D0244E0d545faa679F215E6AeEd46",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/DemoNFT.sol:DemoNFT",
+      "sourceLicense": "MIT",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/demoNFT.standard-input.json",
+      "standardInputSha256": "0x31a22a988e71cd2865d2f9615f172fbc4bef45182cf46521cf392b7bd6728875",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x2e584f69C14D0244E0d545faa679F215E6AeEd46#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x2e584f69C14D0244E0d545faa679F215E6AeEd46"
+    },
+    "auction": {
+      "address": "0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/SealedBidAuction.sol:SealedBidAuction",
+      "sourceLicense": "MIT",
+      "constructorArgs": [
+        "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a",
+        "0x2e584f69C14D0244E0d545faa679F215E6AeEd46",
+        "1",
+        "1000000000000000",
+        "10000000000000",
+        101,
+        16,
+        "0x8A5465A0E50cd28c0D4f4370b644e90e042feF58"
+      ],
+      "encodedConstructorArguments": "000000000000000000000000abf398a8e62cd68137987c4b99c0f24a5fdcd97a0000000000000000000000002e584f69c14d0244e0d545faa679f215e6aeed46000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000038d7ea4c68000000000000000000000000000000000000000000000000000000009184e72a000000000000000000000000000000000000000000000000000000000000000006500000000000000000000000000000000000000000000000000000000000000100000000000000000000000008a5465a0e50cd28c0d4f4370b644e90e042fef58",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/auction.standard-input.json",
+      "standardInputSha256": "0x708caba02c0b0f2616d07b8aa7b0ed5162fe901ec7e79eef757a01cc715c644c",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3"
+    },
+    "halo2": {
+      "address": "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+      "compilerVersion": "v0.8.19+commit.7dd6d404",
+      "contractIdentifier": "src/v2.0-base/OpenVmHalo2Verifier.sol:OpenVmHalo2Verifier",
+      "sourceLicense": "MIT",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/halo2.standard-input.json",
+      "standardInputSha256": "0xc3f87b03c0f9a8abbcbcf998e8cceaed7b006ec06a63ab4cf65b43560d302498",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x025eBbBA94D479810cabd5ec01162EC4792DF8EE#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x025eBbBA94D479810cabd5ec01162EC4792DF8EE"
+    },
+    "bindingReceipt": {
+      "address": "0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/vendor/interfold-openvm/verifiers/OpenVmReceiptVerifier.sol:OpenVmReceiptVerifier",
+      "sourceLicense": "LGPL-3.0-only",
+      "constructorArgs": [
+        "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+        "0x004ab89ac541e865a9e923b17383576c96451d9e3f2cba48c268265e780be415",
+        "0x009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a"
+      ],
+      "encodedConstructorArguments": "000000000000000000000000025ebbba94d479810cabd5ec01162ec4792df8ee004ab89ac541e865a9e923b17383576c96451d9e3f2cba48c268265e780be415009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/bindingReceipt.standard-input.json",
+      "standardInputSha256": "0x59fe99d5e3aee2fa256d32fecf2333a9aa5748a2522c0ab7e25e88e307d930a7",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8"
+    },
+    "computeReceipt": {
+      "address": "0x9Bc72b09f28770d9F6Da71BAC26e8Cd47ACEaB83",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/vendor/interfold-openvm/verifiers/OpenVmReceiptVerifier.sol:OpenVmReceiptVerifier",
+      "sourceLicense": "LGPL-3.0-only",
+      "constructorArgs": [
+        "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+        "0x003e89acda47eb25b207e4284781fa9f0f900201af2457c47f7a41c5f4fdfede",
+        "0x009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a"
+      ],
+      "encodedConstructorArguments": "000000000000000000000000025ebbba94d479810cabd5ec01162ec4792df8ee003e89acda47eb25b207e4284781fa9f0f900201af2457c47f7a41c5f4fdfede009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/computeReceipt.standard-input.json",
+      "standardInputSha256": "0x59fe99d5e3aee2fa256d32fecf2333a9aa5748a2522c0ab7e25e88e307d930a7",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x9Bc72b09f28770d9F6Da71BAC26e8Cd47ACEaB83#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x9Bc72b09f28770d9F6Da71BAC26e8Cd47ACEaB83"
+    },
+    "relations": {
+      "address": "0xDbeE2A075f2ef9E195f3b3F2805718E443A43009",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/generated/AuctionInputHonkVerifier.sol:RelationsLib",
+      "sourceLicense": "Apache-2.0",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/relations.standard-input.json",
+      "standardInputSha256": "0xfb8a37d736e2c1bf7506ed4e1d19b54fcf467d8e06089a77f8d8c966adb5e79b",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0xDbeE2A075f2ef9E195f3b3F2805718E443A43009#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0xDbeE2A075f2ef9E195f3b3F2805718E443A43009"
+    },
+    "zkTranscript": {
+      "address": "0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/generated/AuctionInputHonkVerifier.sol:ZKTranscriptLib",
+      "sourceLicense": "Apache-2.0",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/zkTranscript.standard-input.json",
+      "standardInputSha256": "0xfb8a37d736e2c1bf7506ed4e1d19b54fcf467d8e06089a77f8d8c966adb5e79b",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E"
+    },
+    "encryptionVerifier": {
+      "address": "0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/generated/AuctionInputHonkVerifier.sol:HonkVerifier",
+      "sourceLicense": "Apache-2.0",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {
+        "RelationsLib": "0xDbeE2A075f2ef9E195f3b3F2805718E443A43009",
+        "ZKTranscriptLib": "0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E"
+      },
+      "standardInputPath": "verification/etherscan/encryptionVerifier.standard-input.json",
+      "standardInputSha256": "0xfb8a37d736e2c1bf7506ed4e1d19b54fcf467d8e06089a77f8d8c966adb5e79b",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc"
+    },
+    "inputVerifier": {
+      "address": "0xDe64B2bf17EcC3A933163952427b690eF65Af03D",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/AuctionInputVerifier.sol:AuctionInputVerifier",
+      "sourceLicense": "MIT",
+      "constructorArgs": [
+        "0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc",
+        "0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8",
+        "0xeb4c1699b4f25cf4bf86709095cb51c06d31acbf6cee16d6b7ce304770319eb6",
+        "0x742b3e83fc04a104b25029c56eadaec76767dcbc66298ac2c1c6421aba0bcbc0"
+      ],
+      "encodedConstructorArguments": "0000000000000000000000006e4f3087f0e4a735528fa224dd5182abfb86eccc0000000000000000000000004f6ea50bf0fbe573eefd29cac3902b7b732832f8eb4c1699b4f25cf4bf86709095cb51c06d31acbf6cee16d6b7ce304770319eb6742b3e83fc04a104b25029c56eadaec76767dcbc66298ac2c1c6421aba0bcbc0",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/inputVerifier.standard-input.json",
+      "standardInputSha256": "0xb083134bcc6ced8e9dff3f72a9be2f1e4f54c1b120bc938b982d0f6b937770d3",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0xDe64B2bf17EcC3A933163952427b690eF65Af03D#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0xDe64B2bf17EcC3A933163952427b690eF65Af03D"
+    },
+    "poseidon": {
+      "address": "0x48624777D0b156caD8F1F67aAeDEa8b40D381369",
+      "compilerVersion": "v0.8.28+commit.7893614a",
+      "contractIdentifier": "src/AuctionPoseidon.sol:AuctionPoseidon",
+      "sourceLicense": "MIT",
+      "constructorArgs": [],
+      "encodedConstructorArguments": "",
+      "libraries": {},
+      "standardInputPath": "verification/etherscan/poseidon.standard-input.json",
+      "standardInputSha256": "0xdb4167a26f88dfffe6c31d089e0483b11a21bda61b735be93847e01b6722c17f",
+      "etherscanUrl": "https://sepolia.etherscan.io/address/0x48624777D0b156caD8F1F67aAeDEa8b40D381369#code",
+      "verificationFormUrl": "https://sepolia.etherscan.io/verifyContract?a=0x48624777D0b156caD8F1F67aAeDEa8b40D381369"
+    }
+  }
+}

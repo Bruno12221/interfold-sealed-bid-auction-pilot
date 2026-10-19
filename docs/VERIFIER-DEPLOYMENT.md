@@ -2,7 +2,9 @@
 
 The [Sepolia verifier record](../deployments/verifiers-sepolia.json) contains eight reusable deployed contracts: the pinned Halo2 verifier, input-binding and computation receipt adapters, Noir RelationsLib/ZKTranscriptLib/HonkVerifier, composed AuctionInputVerifier and AuctionPoseidon. Public transaction identifiers, constructor arguments, runtime hashes, application commitments and synthetic known-answer results are retained.
 
-The contracts have recorded exact source matches on Sourcify. The generated OpenVM verifier uses its pinned Solidity 0.8.19 artifact; the application contracts use the Solidity 0.8.28 settings in `foundry.toml`. The linked Noir libraries must preserve the original metadata and explicit link references. The immutable receipt adapters bind distinct executable identities to the same pinned OpenVM verifier.
+The eight verifier contracts and three foundation contracts were source-verified on Sepolia Etherscan on October 19, 2026. They also have recorded exact runtime matches on Sourcify. The generated OpenVM verifier uses its pinned Solidity 0.8.19 artifact; the application contracts use the Solidity 0.8.28 settings in `foundry.toml`. The linked Noir libraries preserve the original metadata and explicit link references. The immutable receipt adapters bind distinct executable identities to the same pinned OpenVM verifier.
+
+The [Etherscan verification report](../deployments/etherscan-verification.json) records each result. [The compiler-input bundle](../verification/etherscan/README.md) contains the exact sources, settings, constructor arguments and linked library addresses used for verification. Publication required no Ethereum transaction.
 
 `AuctionE3Program` is not deployed, registered or bound. The synthetic receipts authenticate public fixture domains. Successful fixture checks do not establish a live release, committee participation, current operator availability or circuit security.
 

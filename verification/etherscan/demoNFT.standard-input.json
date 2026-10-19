@@ -1,0 +1,30 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/DemoNFT.sol": {
+      "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.28;\n\ninterface IERC721Receiver {\n    function onERC721Received(address operator, address from, uint256 tokenId, bytes calldata data)\n        external\n        returns (bytes4);\n}\n\n/// @notice A deliberately small ERC721 for testnet auction demonstrations.\n/// @dev Each account may mint one free demo token. It has no monetary backing.\ncontract DemoNFT {\n    string public constant name = \"Interfold Sepolia Auction Demo\";\n    string public constant symbol = \"IFDEMO\";\n    uint256 public nextTokenId = 1;\n    mapping(uint256 => address) private owners;\n    mapping(address => uint256) private balances;\n    mapping(uint256 => address) private approvals;\n    mapping(address => mapping(address => bool)) public isApprovedForAll;\n    mapping(address => bool) public hasMinted;\n\n    error InvalidOwner();\n    error NonexistentToken();\n    error Unauthorized();\n    error AlreadyMinted();\n    error UnsafeRecipient();\n\n    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);\n    event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);\n    event ApprovalForAll(address indexed owner, address indexed operator, bool approved);\n\n    function supportsInterface(bytes4 interfaceId) external pure returns (bool) {\n        return interfaceId == 0x01ffc9a7 || interfaceId == 0x80ac58cd;\n    }\n\n    function mint() external returns (uint256 tokenId) {\n        if (hasMinted[msg.sender]) revert AlreadyMinted();\n        hasMinted[msg.sender] = true;\n        tokenId = nextTokenId++;\n        owners[tokenId] = msg.sender;\n        balances[msg.sender] += 1;\n        emit Transfer(address(0), msg.sender, tokenId);\n    }\n\n    function ownerOf(uint256 tokenId) public view returns (address owner) {\n        owner = owners[tokenId];\n        if (owner == address(0)) revert NonexistentToken();\n    }\n\n    function balanceOf(address owner) external view returns (uint256) {\n        if (owner == address(0)) revert InvalidOwner();\n        return balances[owner];\n    }\n\n    function getApproved(uint256 tokenId) external view returns (address) {\n        ownerOf(tokenId);\n        return approvals[tokenId];\n    }\n\n    function approve(address approved, uint256 tokenId) external {\n        address owner = ownerOf(tokenId);\n        if (msg.sender != owner && !isApprovedForAll[owner][msg.sender]) revert Unauthorized();\n        approvals[tokenId] = approved;\n        emit Approval(owner, approved, tokenId);\n    }\n\n    function setApprovalForAll(address operator, bool approved) external {\n        if (operator == msg.sender) revert Unauthorized();\n        isApprovedForAll[msg.sender][operator] = approved;\n        emit ApprovalForAll(msg.sender, operator, approved);\n    }\n\n    function transferFrom(address from, address to, uint256 tokenId) public {\n        address owner = ownerOf(tokenId);\n        if (owner != from || to == address(0)) revert InvalidOwner();\n        if (msg.sender != owner && msg.sender != approvals[tokenId] && !isApprovedForAll[owner][msg.sender]) {\n            revert Unauthorized();\n        }\n        delete approvals[tokenId];\n        owners[tokenId] = to;\n        balances[from] -= 1;\n        balances[to] += 1;\n        emit Transfer(from, to, tokenId);\n    }\n\n    function safeTransferFrom(address from, address to, uint256 tokenId) external {\n        safeTransferFrom(from, to, tokenId, \"\");\n    }\n\n    function safeTransferFrom(address from, address to, uint256 tokenId, bytes memory data) public {\n        transferFrom(from, to, tokenId);\n        if (to.code.length != 0) {\n            try IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, data) returns (bytes4 response) {\n                if (response != IERC721Receiver.onERC721Received.selector) revert UnsafeRecipient();\n            } catch {\n                revert UnsafeRecipient();\n            }\n        }\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "metadata",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object"
+        ]
+      }
+    }
+  }
+}

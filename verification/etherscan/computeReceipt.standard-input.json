@@ -1,0 +1,32 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "src/vendor/interfold-openvm/interfaces/IOpenVmReceiptVerifier.sol": {
+      "content": "// SPDX-License-Identifier: LGPL-3.0-only\npragma solidity 0.8.28;\n\n/// @notice Verifies an OpenVM receipt against a configured application and journal digest.\ninterface IOpenVmReceiptVerifier {\n    /// @notice The receipt identity that `verify` accepts.\n    function imageId() external view returns (bytes32);\n\n    function verify(\n        bytes calldata seal,\n        bytes32 imageId,\n        bytes32 journalDigest\n    ) external view;\n}\n"
+    },
+    "src/vendor/interfold-openvm/verifiers/OpenVmReceiptVerifier.sol": {
+      "content": "// SPDX-License-Identifier: LGPL-3.0-only\n//\n// This file is provided WITHOUT ANY WARRANTY;\n// without even the implied warranty of MERCHANTABILITY\n// or FITNESS FOR A PARTICULAR PURPOSE.\npragma solidity 0.8.28;\n\nimport {\n    IOpenVmReceiptVerifier\n} from \"../interfaces/IOpenVmReceiptVerifier.sol\";\n\ninterface IOpenVmHalo2Verifier {\n    function verify(\n        bytes calldata publicValues,\n        bytes calldata proofData,\n        bytes32 appExeCommit,\n        bytes32 appVmCommit\n    ) external view;\n}\n\n/// @notice Verifies the Halo2 proof and binds it to one OpenVM executable and VM.\ncontract OpenVmReceiptVerifier is IOpenVmReceiptVerifier {\n    uint256 private constant SCALAR_MODULUS =\n        0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001;\n    uint256 private constant PROOF_DATA_LENGTH = (12 + 43) * 32;\n    bytes32 public constant IMAGE_DOMAIN =\n        keccak256(\"INTERFOLD_OPENVM_RECEIPT_V1\");\n\n    IOpenVmHalo2Verifier public immutable verifier;\n    bytes32 public immutable appExeCommit;\n    bytes32 public immutable appVmCommit;\n    bytes32 public immutable imageId;\n\n    error InvalidVerifier();\n    error InvalidAppCommitment();\n    error WrongImageId();\n    error InvalidSealVersion();\n    error InvalidSealEncoding();\n    error InvalidProofDataLength();\n\n    constructor(\n        IOpenVmHalo2Verifier verifier_,\n        bytes32 appExeCommit_,\n        bytes32 appVmCommit_\n    ) {\n        if (address(verifier_).code.length == 0) revert InvalidVerifier();\n        if (\n            appExeCommit_ == bytes32(0) ||\n            appVmCommit_ == bytes32(0) ||\n            uint256(appExeCommit_) >= SCALAR_MODULUS ||\n            uint256(appVmCommit_) >= SCALAR_MODULUS\n        ) revert InvalidAppCommitment();\n        verifier = verifier_;\n        appExeCommit = appExeCommit_;\n        appVmCommit = appVmCommit_;\n        imageId = keccak256(\n            abi.encode(\n                IMAGE_DOMAIN,\n                address(verifier_),\n                appExeCommit_,\n                appVmCommit_\n            )\n        );\n    }\n\n    /// @notice Verify the Halo2 proof for the caller's journal digest.\n    /// @dev The seal is `abi.encode(uint8 version, bytes proofData)`. The digest is the proof's only\n    /// public value, so the Halo2 verifier binds it, and the seal does not repeat the journal.\n    function verify(\n        bytes calldata seal,\n        bytes32 expectedImageId,\n        bytes32 expectedJournalDigest\n    ) external view {\n        if (expectedImageId != imageId) revert WrongImageId();\n        (uint8 version, bytes memory proofData) = abi.decode(\n            seal,\n            (uint8, bytes)\n        );\n        if (version != 1) revert InvalidSealVersion();\n        if (keccak256(seal) != keccak256(abi.encode(version, proofData)))\n            revert InvalidSealEncoding();\n        if (proofData.length != PROOF_DATA_LENGTH)\n            revert InvalidProofDataLength();\n\n        verifier.verify(\n            abi.encodePacked(expectedJournalDigest),\n            proofData,\n            appExeCommit,\n            appVmCommit\n        );\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "remappings": [],
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "metadata": {
+      "bytecodeHash": "ipfs"
+    },
+    "evmVersion": "cancun",
+    "libraries": {},
+    "outputSelection": {
+      "*": {
+        "*": [
+          "metadata",
+          "evm.bytecode.object",
+          "evm.deployedBytecode.object"
+        ]
+      }
+    }
+  }
+}
