@@ -1,0 +1,31 @@
+{
+  "name": "interfold-sepolia-auction-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "test:bfv": "cargo test --locked --manifest-path pilot/bfv-slots/Cargo.toml",
+    "pilot:local": "node scripts/local-pilot.mjs",
+    "pilot:status": "node scripts/pilot-status.mjs",
+    "pilot:export": "node scripts/auction-session.mjs export",
+    "pilot:settlement": "node scripts/auction-session.mjs settlement",
+    "pilot:avail": "node scripts/avail-preflight.mjs",
+    "pilot:openvm": "node scripts/openvm-smoke.mjs",
+    "pilot:proof-times": "node scripts/openvm-proof-timing.mjs",
+    "pilot:receipt-stages": "node scripts/openvm-receipt-stages.mjs",
+    "pilot:package-roots": "node scripts/package-root-handoff.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "check:sepolia": "node scripts/check-deployment.mjs",
+    "deploy:sepolia": "node scripts/deploy-sepolia.mjs",
+    "demo:bfv": "cargo run --locked --manifest-path pilot/bfv-slots/Cargo.toml",
+    "deploy:verifiers": "node scripts/deploy-verifiers.mjs deploy",
+    "plan:verifiers": "node scripts/deploy-verifiers.mjs plan",
+    "check:verifiers": "node scripts/deploy-verifiers.mjs check",
+    "plan:program": "node scripts/prepare-program.mjs",
+    "pilot:package-input": "node scripts/package-input-proof-job.mjs"
+  },
+  "dependencies": {
+    "ethers": "6.15.0"
+  }
+}

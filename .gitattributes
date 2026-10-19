@@ -1,0 +1,2 @@
+# Preserve the generated verifier byte for byte for provenance/reproducibility.
+src/generated/AuctionInputHonkVerifier.sol -whitespace

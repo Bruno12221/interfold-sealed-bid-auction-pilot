@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "public-synthetic-real-openvm-evm-receipt-fixtures",
+  "interfoldRevision": "c65722fcab24b3b5ffc7ccaf4544bd1d6ef8826a",
+  "openvmVersion": "2.0.2",
+  "openvmRevision": "59a69b8b0cbee7011ac978e4cc07707ee3681944",
+  "verifierArtifact": {
+    "path": "verifier.bytecode.json",
+    "upstreamSetupPath": "halo2/src/v2.0-base/verifier.bytecode.json",
+    "bytes": 39908,
+    "sha256": "6f2dac7ec5dd42fbff0d5a1e5ba99e3b53c005d94dc699b5dc4c50b0bd891b99",
+    "creationBytecodeBytes": 19781,
+    "recordedSolcVersion": "0.8.19",
+    "recompiledForTests": false
+  },
+  "vmCommitment": "0x009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a",
+  "binding": {
+    "executableCommitment": "0x004ab89ac541e865a9e923b17383576c96451d9e3f2cba48c268265e780be415",
+    "seal": {
+      "path": "binding.seal.bin",
+      "bytes": 1856,
+      "sha256": "7e0edca80f2f682deb45a9f4113ace9daa252e84568199e66d2156b8d1f1374d"
+    },
+    "journal": {
+      "path": "binding.journal.bin",
+      "bytes": 416,
+      "sha256": "639f28c18424c45b4c298c3d19aeb5b11a5c3ff9a7e984426e301bf32056ec13"
+    },
+    "matchesExistingNoirStatement": "../auction-input/statement.bin"
+  },
+  "compute": {
+    "executableCommitment": "0x003e89acda47eb25b207e4284781fa9f0f900201af2457c47f7a41c5f4fdfede",
+    "seal": {
+      "path": "compute.seal.bin",
+      "bytes": 1856,
+      "sha256": "4bb590a02ba5179a668c6a9ceab84fac8115b1da58556f28a7b6ce3f450ffe10"
+    },
+    "journal": {
+      "path": "compute.journal.bin",
+      "bytes": 288,
+      "sha256": "950c64bc9fc6a964720484dc6ba682752acfba2ac79d4a97538f7895b6fe4f78"
+    }
+  },
+  "limitations": [
+    "Independent synthetic fixture domains, not one auction",
+    "Not reusable for a new committee key, bidder, slot, context or E3",
+    "No live data availability, threshold decryption or Sepolia deployment demonstrated"
+  ]
+}

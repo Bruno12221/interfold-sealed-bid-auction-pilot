@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "interfoldCommit": "c65722fcab24b3b5ffc7ccaf4544bd1d6ef8826a",
+  "nargoVersion": "1.0.0-beta.26",
+  "bbVersion": "5.2.0",
+  "verifierTarget": "evm",
+  "zeroKnowledge": true,
+  "publicInputCount": 26,
+  "proofBytes": 11072,
+  "bytecodeSha256": "0xeb4c1699b4f25cf4bf86709095cb51c06d31acbf6cee16d6b7ce304770319eb6",
+  "vkSha256": "0xd855e6316436a2c3a0846c67c43d6cd3c11d753289ac6d9763d14bf8c66693e6",
+  "proofSha256": "0x2359b83a7f24c68c4e13b740ec85ab512290ee848900e770e9d734d02d7612c1",
+  "statementSha256": "0x639f28c18424c45b4c298c3d19aeb5b11a5c3ff9a7e984426e301bf32056ec13",
+  "validProofVerified": true,
+  "tamperedProofRejected": true,
+  "changedStatementRejected": true,
+  "serializationBindingProofVerified": true,
+  "composedInputProofReady": true,
+  "note": "Public synthetic EVM ZK proof fixture; raw private witness is excluded. RealOpenVmReceipts.t.sol verifies the actual Noir proof and returned OpenVM binding receipt together. Synthetic domains do not establish live admission or a deployed release.",
+  "solidityRuntimeBytes": {
+    "HonkVerifier": 18242,
+    "RelationsLib": 7972,
+    "ZKTranscriptLib": 6151
+  },
+  "solidityProofVerificationGas": 3672833,
+  "bindingReceiptProvenance": "../openvm-receipts/provenance.json",
+  "composedInputProofVerificationGas": 4108680
+}

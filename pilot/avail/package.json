@@ -1,0 +1,22 @@
+{
+  "name": "interfold-avail-turing-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.15" },
+  "scripts": {
+    "wallet-init": "node cli.mjs wallet-init",
+    "publish": "node cli.mjs publish",
+    "publish-status": "node cli.mjs publish-status",
+    "preflight": "node cli.mjs preflight",
+    "eligibility": "node cli.mjs eligibility",
+    "plan": "node cli.mjs plan",
+    "proof": "node cli.mjs proof",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "@polkadot/api": "15.10.2",
+    "avail-js-sdk": "0.4.2",
+    "ethers": "6.15.0"
+  }
+}

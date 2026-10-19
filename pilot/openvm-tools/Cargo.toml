@@ -1,0 +1,19 @@
+[package]
+name = "interfold-auction-openvm-tools"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+resolver = "3"
+
+[dependencies]
+openvm-sdk = { git = "https://github.com/openvm-org/openvm.git", tag = "v2.0.2", default-features = false, features = ["parallel", "evm-verify"] }
+openvm-sdk-config = { git = "https://github.com/openvm-org/openvm.git", tag = "v2.0.2" }
+openvm-circuit = { git = "https://github.com/openvm-org/openvm.git", tag = "v2.0.2", default-features = false }
+openvm-continuations = { git = "https://github.com/openvm-org/openvm.git", tag = "v2.0.2" }
+openvm-stark-backend = { git = "https://github.com/openvm-org/stark-backend.git", tag = "v2.0.1", default-features = false }
+sha2 = "=0.10.9"
+eyre = "0.6"
+serde_json = "1"
+hex = "0.4"

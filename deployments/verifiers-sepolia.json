@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "chainId": 11155111,
+  "deployer": "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a",
+  "interfold": "0xBD5B6D1aDA9e0eB248B678469C9Cd6a63507E42b",
+  "createdAt": "2026-10-18T07:09:49.916Z",
+  "status": "verifiers-deployed-fixture-validated-program-deferred",
+  "forkTest": false,
+  "maxTotalDeploymentSpendEthIncludingFoundation": "0.005",
+  "contracts": {
+    "halo2": {
+      "address": "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+      "constructorArgs": [],
+      "runtimeCodeHash": "0xc164e9a2f1317f2babaccd3b14efe13a172225dbee3ffff0f95d5afda7b6b99c",
+      "artifactPath": "../test/fixtures/openvm-receipts/verifier.bytecode.json",
+      "artifactSha256": "0x6f2dac7ec5dd42fbff0d5a1e5ba99e3b53c005d94dc699b5dc4c50b0bd891b99",
+      "creationTransactionMatchesArtifact": true
+    },
+    "bindingReceipt": {
+      "address": "0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8",
+      "constructorArgs": [
+        "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+        "0x004ab89ac541e865a9e923b17383576c96451d9e3f2cba48c268265e780be415",
+        "0x009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a"
+      ],
+      "runtimeCodeHash": "0x24f14d5f1d67140b6b8f5cdebcb21c109a154415635b53b096e70769d35930aa",
+      "artifactPath": "verifier-artifacts/OpenVmReceiptVerifier.json",
+      "artifactSha256": "0xd719389ae9eb0aaf0c7df5e428e308d5c9c8504bda4acb49fdb70cf6c80b73cf",
+      "creationTransactionMatchesArtifact": true
+    },
+    "computeReceipt": {
+      "address": "0x9Bc72b09f28770d9F6Da71BAC26e8Cd47ACEaB83",
+      "constructorArgs": [
+        "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+        "0x003e89acda47eb25b207e4284781fa9f0f900201af2457c47f7a41c5f4fdfede",
+        "0x009034802c4d22df352e22772fc613453a77e387b95479ef296bbef78edc588a"
+      ],
+      "runtimeCodeHash": "0x1558d794fa2a541ea5fadef8df8ed4a0c8705151505675c9d120fc61bce4a576",
+      "artifactPath": "verifier-artifacts/OpenVmReceiptVerifier.json",
+      "artifactSha256": "0xd719389ae9eb0aaf0c7df5e428e308d5c9c8504bda4acb49fdb70cf6c80b73cf",
+      "creationTransactionMatchesArtifact": true
+    },
+    "relations": {
+      "address": "0xDbeE2A075f2ef9E195f3b3F2805718E443A43009",
+      "constructorArgs": [],
+      "runtimeCodeHash": "0xb5baebe4e40ac6449fa19ede33ea491bcb97a7cb2848d5cfe546b0bb01b3eff2",
+      "artifactPath": "verifier-artifacts/RelationsLib.json",
+      "artifactSha256": "0x5b1a46828c08e7778914e5bc355a58fd01d3f88d4a6cc96b572bb5623127e646",
+      "creationTransactionMatchesArtifact": true
+    },
+    "zkTranscript": {
+      "address": "0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E",
+      "constructorArgs": [],
+      "runtimeCodeHash": "0xf2b6bf3badb0db697640af08cfdf1d10a8e5d762b8d4345abea87103cc772bd1",
+      "artifactPath": "verifier-artifacts/ZKTranscriptLib.json",
+      "artifactSha256": "0xa1a35047c68aaecc1acd43ae8b989b72ef09db133a739114be4b37be907e624d",
+      "creationTransactionMatchesArtifact": true
+    },
+    "encryptionVerifier": {
+      "address": "0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc",
+      "constructorArgs": [],
+      "runtimeCodeHash": "0x1d735b4d93a1e5994b5b51f454c909ea15f259191e998c998be9e44ae1eb95f5",
+      "artifactPath": "verifier-artifacts/HonkVerifier.json",
+      "artifactSha256": "0x114d51d3d60a00729a6f95040aebc4d5c4d6e3dcad65f0dfd5a4e588cc85391f",
+      "creationTransactionMatchesArtifact": true
+    },
+    "inputVerifier": {
+      "address": "0xDe64B2bf17EcC3A933163952427b690eF65Af03D",
+      "constructorArgs": [
+        "0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc",
+        "0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8",
+        "0xeb4c1699b4f25cf4bf86709095cb51c06d31acbf6cee16d6b7ce304770319eb6",
+        "0x742b3e83fc04a104b25029c56eadaec76767dcbc66298ac2c1c6421aba0bcbc0"
+      ],
+      "runtimeCodeHash": "0x4ce9a4faa77edbc57dc25c3e86dd397573ff43870123db5598659c36fe25e69f",
+      "artifactPath": "verifier-artifacts/AuctionInputVerifier.json",
+      "artifactSha256": "0xa5c0388339898f43561b50186a870f433038f72697b9a969a448de689fbd6551",
+      "creationTransactionMatchesArtifact": true
+    },
+    "poseidon": {
+      "address": "0x48624777D0b156caD8F1F67aAeDEa8b40D381369",
+      "constructorArgs": [],
+      "runtimeCodeHash": "0xaec08aa65369291b6592880a111ba648473b34523805ce0e6d341b84c6583b16",
+      "artifactPath": "verifier-artifacts/AuctionPoseidon.json",
+      "artifactSha256": "0x759ba98f12c5ab49f75f3c01e61d2793642b00acb391035e94b5707d64ad1bc8",
+      "creationTransactionMatchesArtifact": true
+    }
+  },
+  "transactions": [
+    {
+      "label": "halo2",
+      "address": "0x025eBbBA94D479810cabd5ec01162EC4792DF8EE",
+      "nonce": 4,
+      "gasEstimate": "30986793",
+      "gasLimit": "37184151",
+      "dataHash": "0xf0009263e948b02fe0eff62e2798b53f5d386ec412ac7d3ac102aa6f287ecf1b",
+      "status": "confirmed",
+      "hash": "0x924332c2fe0a0bbd88514169dc1eadffc9f1559bc274ab93b363754382128954",
+      "blockNumber": 11939493,
+      "gasUsed": "30741644",
+      "feeEth": "0.00003074210512466"
+    },
+    {
+      "label": "bindingReceipt",
+      "address": "0x4f6ea50BF0FBe573eeFD29cAc3902B7b732832F8",
+      "nonce": 5,
+      "gasEstimate": "2385112",
+      "gasLimit": "2862134",
+      "dataHash": "0x5d06ae62e84a4abb8355c584a5e3cbb8198811a9d17a94c03937d3f92cd6d248",
+      "status": "confirmed",
+      "hash": "0x7d90d41d9884c92682b14d55d1bb5a5dde272bb320531b6ea037134c77b18a8d",
+      "blockNumber": 11939494,
+      "gasUsed": "2365174",
+      "feeEth": "0.00000236520947761"
+    },
+    {
+      "label": "computeReceipt",
+      "address": "0x9Bc72b09f28770d9F6Da71BAC26e8Cd47ACEaB83",
+      "nonce": 6,
+      "gasEstimate": "2385112",
+      "gasLimit": "2862134",
+      "dataHash": "0x6648a9b72dabdf5586f23403ced571a887edabd69dd265d7fd66c56a57cc25c7",
+      "status": "confirmed",
+      "hash": "0x5b2805e0f887fc708a818d112d1447904730875fc8f8b751a80428b467fdd1e2",
+      "blockNumber": 11939495,
+      "gasUsed": "2365174",
+      "feeEth": "0.00000236520947761"
+    },
+    {
+      "label": "relations",
+      "address": "0xDbeE2A075f2ef9E195f3b3F2805718E443A43009",
+      "nonce": 7,
+      "gasEstimate": "12636686",
+      "gasLimit": "15164023",
+      "dataHash": "0x7ed8c8a4e91c7b6876a846de5b651409f84a8cc53dbd496dd0b40287bab64f19",
+      "status": "confirmed",
+      "hash": "0xccdefd05b5fb7ae2486c536afb1935969af3f87ad9293dc01bc9b4aaba42f675",
+      "blockNumber": 11939496,
+      "gasUsed": "12536026",
+      "feeEth": "0.00001253621404039"
+    },
+    {
+      "label": "zkTranscript",
+      "address": "0x2B3D50baCAc6A2F0C52898Febf21AA0cB50DD96E",
+      "nonce": 8,
+      "gasEstimate": "9798354",
+      "gasLimit": "11758024",
+      "dataHash": "0xc1ec9213a458977bde22b784282ef99ddd77bcc9346ca315e02ad9cfee1c0c8d",
+      "status": "confirmed",
+      "hash": "0xd61561b209c3512a3c10e03427bdbee313c6c511e48df2165b58ee477b14ca4f",
+      "blockNumber": 11939497,
+      "gasUsed": "9720044",
+      "feeEth": "0.00000972018980066"
+    },
+    {
+      "label": "encryptionVerifier",
+      "address": "0x6E4F3087F0e4A735528fA224Dd5182aBFB86eCcc",
+      "nonce": 9,
+      "gasEstimate": "28642969",
+      "gasLimit": "34371562",
+      "dataHash": "0x7b5e489d1074504b8ea963e7468a376df8007a936f81f2cf0a9753d294186fa8",
+      "status": "confirmed",
+      "hash": "0x2fba689f2217710d8280701d7fa136f6b6ede9cbfce14656de10246222f5bb29",
+      "blockNumber": 11939498,
+      "gasUsed": "28416276",
+      "feeEth": "0.00002841670224414"
+    },
+    {
+      "label": "inputVerifier",
+      "address": "0xDe64B2bf17EcC3A933163952427b690eF65Af03D",
+      "nonce": 10,
+      "gasEstimate": "4983543",
+      "gasLimit": "5980251",
+      "dataHash": "0xafa104c5ff5224c9359e875f39b8c2da5898ee2d6e09cdd19b8644989931c2e8",
+      "status": "confirmed",
+      "hash": "0x09897cad93f9e58874b10535bdfb40133c1de78c079de97a27a3294c251ee6c0",
+      "blockNumber": 11939499,
+      "gasUsed": "4943144",
+      "feeEth": "0.00000494321814716"
+    },
+    {
+      "label": "poseidon",
+      "address": "0x48624777D0b156caD8F1F67aAeDEa8b40D381369",
+      "nonce": 11,
+      "gasEstimate": "25772319",
+      "gasLimit": "30926782",
+      "dataHash": "0x27473114672dbe8bf07464b7ff2d2c3fe5e2dacbd33c39c4a310a95c952f8866",
+      "status": "confirmed",
+      "hash": "0xa1de7afce9ccc4ff1ae2e71b01a3974f7ea39f5989498207955504a87d085a51",
+      "blockNumber": 11939500,
+      "gasUsed": "25568229",
+      "feeEth": "0.000025568612523435"
+    }
+  ],
+  "programDeployed": false,
+  "sourceBound": false,
+  "actualProgramReleaseReady": false,
+  "totalGasCostEthIncludingFoundation": "0.000145566592466907",
+  "knownAnswers": {
+    "checkedAt": "2026-10-18T14:39:23.526Z",
+    "blockNumber": 11941723,
+    "checks": [
+      {
+        "label": "binding",
+        "validProofAccepted": true,
+        "modifiedProofRejected": true,
+        "wrongJournalRejected": true,
+        "imageId": "0x742b3e83fc04a104b25029c56eadaec76767dcbc66298ac2c1c6421aba0bcbc0",
+        "journalDigest": "0x639f28c18424c45b4c298c3d19aeb5b11a5c3ff9a7e984426e301bf32056ec13"
+      },
+      {
+        "label": "compute",
+        "validProofAccepted": true,
+        "modifiedProofRejected": true,
+        "wrongJournalRejected": true,
+        "imageId": "0x09ce7dee7d04b3f2d59ffa8ed5cb6bb5ef31b61818fe1bbc18cd09e3abccaa2f",
+        "journalDigest": "0x950c64bc9fc6a964720484dc6ba682752acfba2ac79d4a97538f7895b6fe4f78"
+      },
+      {
+        "label": "composedInput",
+        "validProofAccepted": true,
+        "modifiedNoirRejected": true,
+        "modifiedBindingRejected": true,
+        "fixtureDomainOnly": true,
+        "actualProgramDomainProofVerified": false
+      }
+    ],
+    "inputCircuitId": "0x92b0150cbb622aeaabff2c29ac0d78f490a08506148886d6d0b18a6e38e37ec9",
+    "bindingImageId": "0x742b3e83fc04a104b25029c56eadaec76767dcbc66298ac2c1c6421aba0bcbc0",
+    "fixtureKnownAnswersPassed": true,
+    "actualProgramReleaseReady": false
+  },
+  "foundation": {
+    "sourceUnbound": true,
+    "sourceReady": false,
+    "auctionState": "Created",
+    "bids": 0,
+    "auctionBalanceWei": "0"
+  },
+  "completedAt": "2026-10-18T07:11:28.291Z",
+  "programDeploymentDeferredReason": "AuctionE3Program deployment, operator review, release evidence and owner registration remain pending."
+}

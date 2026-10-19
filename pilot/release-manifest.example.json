@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "chainId": 11155111,
+  "auction": "0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3",
+  "resultSource": "0x8A5465A0E50cd28c0D4f4370b644e90e042feF58",
+  "program": null,
+  "paramsHash": null,
+  "poseidon": { "address": null, "runtimeCodeHash": null },
+  "inputVerifier": { "address": null, "runtimeCodeHash": null, "circuitId": null, "artifactPath": null, "artifactSha256": null },
+  "computeVerifier": { "address": null, "runtimeCodeHash": null, "imageId": null, "artifactPath": null, "artifactSha256": null },
+  "dataAvailabilityVerifier": { "address": null, "runtimeCodeHash": null, "artifactPath": null, "artifactSha256": null },
+  "knownAnswerProof": { "path": null, "sha256": null },
+  "note": "Incomplete example. Fill only from real reproducible proof builds. Known-answer JSON must contain valid and tampered calldata for each pinned verifier; see docs/PILOT-RUNBOOK.md."
+}

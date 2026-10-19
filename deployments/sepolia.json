@@ -1,0 +1,89 @@
+{
+  "chainId": 11155111,
+  "interfold": "0xBD5B6D1aDA9e0eB248B678469C9Cd6a63507E42b",
+  "deployer": "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a",
+  "createdAt": "2026-10-15T18:20:54.144Z",
+  "status": "foundation-disabled",
+  "transactions": [
+    {
+      "label": "resultSource",
+      "hash": "0xc806b694058e3df69a03c93567f52f0b892cbe3f5fc1ae16faa17f704cece170",
+      "url": "https://sepolia.etherscan.io/tx/0xc806b694058e3df69a03c93567f52f0b892cbe3f5fc1ae16faa17f704cece170",
+      "blockNumber": 11922174,
+      "gasUsed": "10723954",
+      "feeEth": "0.000010724136307218"
+    },
+    {
+      "label": "demoNFT",
+      "hash": "0x64a244567df9c3a2aa54887cab9befb09f00c19c5469d19f0d6ad8c7fcbf8f0f",
+      "url": "https://sepolia.etherscan.io/tx/0x64a244567df9c3a2aa54887cab9befb09f00c19c5469d19f0d6ad8c7fcbf8f0f",
+      "blockNumber": 11922175,
+      "gasUsed": "4906332",
+      "feeEth": "0.000004906420313976"
+    },
+    {
+      "label": "mintDemoNFT",
+      "hash": "0xe214817e3e18c953b4a63ac52367ce59e5ff4b6afa2bab0d0161e3ef78d12f0c",
+      "url": "https://sepolia.etherscan.io/tx/0xe214817e3e18c953b4a63ac52367ce59e5ff4b6afa2bab0d0161e3ef78d12f0c",
+      "blockNumber": 11922176,
+      "gasUsed": "360440",
+      "feeEth": "0.00000036044648792"
+    },
+    {
+      "label": "auction",
+      "hash": "0x97695b685ac475d739a50b3faad1406af96dbd0cffb5d9e704e30e9715925f52",
+      "url": "https://sepolia.etherscan.io/tx/0x97695b685ac475d739a50b3faad1406af96dbd0cffb5d9e704e30e9715925f52",
+      "blockNumber": 11922177,
+      "gasUsed": "12917896",
+      "feeEth": "0.000012918128522128"
+    }
+  ],
+  "auctionType": "second-price",
+  "revealAllBidsAfterClose": true,
+  "limits": {
+    "maxDeploymentSpendEth": "0.005",
+    "collateralEth": "0.001",
+    "tickEth": "0.00001",
+    "priceLevels": 101,
+    "maxBidders": 16
+  },
+  "warning": "Sepolia source-review deployment. No completed live encrypted auction is represented.",
+  "resultSource": {
+    "address": "0x8A5465A0E50cd28c0D4f4370b644e90e042feF58",
+    "constructorArgs": [
+      "0xBD5B6D1aDA9e0eB248B678469C9Cd6a63507E42b",
+      "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a"
+    ],
+    "url": "https://sepolia.etherscan.io/address/0x8A5465A0E50cd28c0D4f4370b644e90e042feF58",
+    "runtimeCodeHash": "0x9cc951d9304096a7444545975d42d74443454a26a57f07c23abe28550055c6de"
+  },
+  "demoNFT": {
+    "address": "0x2e584f69C14D0244E0d545faa679F215E6AeEd46",
+    "constructorArgs": [],
+    "url": "https://sepolia.etherscan.io/address/0x2e584f69C14D0244E0d545faa679F215E6AeEd46",
+    "runtimeCodeHash": "0x192eeaec04d6f5713ef9451cefa576169f3352038903113dcb43045ef0cd1700"
+  },
+  "auction": {
+    "address": "0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3",
+    "constructorArgs": [
+      "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a",
+      "0x2e584f69C14D0244E0d545faa679F215E6AeEd46",
+      "1",
+      "1000000000000000",
+      "10000000000000",
+      101,
+      16,
+      "0x8A5465A0E50cd28c0D4f4370b644e90e042feF58"
+    ],
+    "url": "https://sepolia.etherscan.io/address/0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3",
+    "runtimeCodeHash": "0x128285df2f4aa5f9aa2ae39a7b646efb05bd0642daf19866886a4ec7d39fdfd3"
+  },
+  "verified": {
+    "resultSourceReady": false,
+    "boundProgram": "0x0000000000000000000000000000000000000000",
+    "demoNFTOwner": "0xabF398A8e62CD68137987C4b99C0f24a5FDcd97a",
+    "auctionAddress": "0x63B12dda13bF51e0FF8BDEc4C9DaaF03786792C3",
+    "auctionETHBalance": "0.0"
+  },
+  "totalGasCostEth": "0.000028909131631242"
+}

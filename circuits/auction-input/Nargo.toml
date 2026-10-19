@@ -1,0 +1,11 @@
+[package]
+name = "auction_input"
+type = "bin"
+authors = ["Interfold auction pilot"]
+compiler_version = ">=1.0.0"
+
+[dependencies]
+# Nargo beta.26 accepts tags only. setup.mjs creates and verifies this ignored
+# exact-commit checkout instead of trusting a mutable release tag.
+interfold = { path = "../../.tools/interfold-noir/circuits/lib" }
+auction_slot = { path = "../auction-slot" }

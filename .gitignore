@@ -1,0 +1,37 @@
+# Build products and downloaded toolchains
+out/
+cache/
+node_modules/
+target/
+dist/
+build/
+.tools/
+# Local keys, wallet databases, runtime proof inputs and operator reports
+.env
+.env.*
+!.env.example
+.secrets/
+.local/
+.pilot/
+broadcast/
+*.keystore
+*.private.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+*.wtns
+*.witness
+Prover.toml
+# Local research, personal documents and transfer archives
+/local-research/
+/interfold-compression-results.tar.gz
+*.docx
+*.pdf
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+.DS_Store

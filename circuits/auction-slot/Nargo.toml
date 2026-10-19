@@ -1,0 +1,5 @@
+[package]
+name = "auction_slot"
+type = "lib"
+authors = ["Interfold auction pilot"]
+compiler_version = ">=1.0.0"

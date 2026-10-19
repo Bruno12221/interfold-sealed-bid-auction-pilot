@@ -1,0 +1,29 @@
+{
+  "name": "interfold-railgun-sepolia-pilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "preflight": "node cli.mjs preflight",
+    "wallet:init": "node cli.mjs wallet-init",
+    "sdk:smoke": "node cli.mjs sdk-smoke",
+    "funding:plan": "node cli.mjs funding-plan",
+    "test": "node --test test/*.test.mjs",
+    "shield:prepare": "node cli.mjs shield-prepare",
+    "shield:send": "node cli.mjs shield-send",
+    "unshield:prepare": "node cli.mjs unshield-prepare",
+    "unshield:send": "node cli.mjs unshield-send"
+  },
+  "dependencies": {
+    "@railgun-community/wallet": "10.9.0",
+    "@railgun-community/shared-models": "8.0.1",
+    "@railgun-community/waku-broadcaster-client-node": "9.0.1",
+    "ethers": "6.14.3",
+    "leveldown": "6.1.1",
+    "snarkjs": "0.7.5",
+    "@railgun-community/engine": "9.6.0"
+  }
+}
